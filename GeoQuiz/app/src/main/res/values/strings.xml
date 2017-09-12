@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">GeoQuiz</string>
+    <string name="question_1">1+1=2</string>
+    <string name="question_2">2+3=4</string>
+    <string name="question_3">3+3=4</string>
+    <string name="question_4">4+3=4</string>
+    <string name="question_5">5+3=8</string>
+    <string name="next_button">Next</string>
+    <string name="prev_button">Prev</string>
+    <string name="true_button">TRUE</string>
+    <string name="false_button">FALSE</string>
+    <string name="show_answer_button">SHOW ANSWER</string>
+    <string name="cheat_button">CHEAT!</string>
+    <string name="judgment_toast">Cheat is wrong.</string>
+    <string name="incorrect_toast">Incorrect!</string>
+    <string name="correct_toast">Correct!</string>
+    <string name="warning_text">Are you sure you want to do this!</string>
+</resources>
