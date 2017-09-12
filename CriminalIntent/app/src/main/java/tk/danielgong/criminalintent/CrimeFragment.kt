@@ -25,47 +25,33 @@ class CrimeFragment: Fragment() {
         super.onCreate(savedInstanceState)
     }
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View {
+    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val v = inflater?.inflate(R.layout.fragment_crime, container, false)
         return v!!
     }
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-//    }
-        Log.d("GGGKKK0", view?.toString())
-        Log.d("GGGKKK0", "====")
 
-        crime_title?.addTextChangedListener(object: TextWatcher {
+        crime_title.addTextChangedListener(object: TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
             }
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
                 mCrime.mTitle = p0.toString()
-                Log.d("GGGooo:", p0.toString())
             }
             override fun afterTextChanged(p0: Editable?) {
             }
         })
-        val btn = view?.findViewById<Button>(R.id.crime_date)
-//        btn?.text = mCrime.mDate.toString()
-        Log.d("GGG0:", btn?.toString())
 
-//        Log.d("GGG1:", crime_date?.toString())
+        crime_date.text  = mCrime.mDate.toString()
 
-//        this.crime_date?.text = "asd"
-        if (crime_date != null) {
-            val btn = crime_date as Button
-            crime_date.text  = mCrime.mDate.toString()
-            Log.d("GGG", mCrime.mDate.toString())
-        }
-        crime_date?.onClick {
+        crime_date.onClick {
             toast(mCrime.mDate.toString())
         }
-//        crime_data?.isEnabled = true
-        crime_solved?.isChecked = true
-        crime_solved?.onClick {
+
+        crime_solved.isChecked = true
+        crime_solved.onClick {
             mCrime.mSolved = crime_solved.isChecked
         }
-//        return v!!
     }
 }
